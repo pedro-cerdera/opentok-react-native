@@ -246,7 +246,7 @@ public class OTSessionManager extends ReactContextBaseJavaModule
         if (mSession != null) {
             mSession.disconnect();
             if (connectionStatus == 0) {
-                disconnectCallback.invoke();
+                disconnectCallback.invoke("Error disconnecting session. The session has already disconnected.");
                 disconnectCallback = null;
             }
         }
